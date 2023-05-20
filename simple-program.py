@@ -32,12 +32,12 @@ from library.log import logger
 
 # Set your COM port e.g. COM3 for Windows, /dev/ttyACM0 for Linux, etc. or "AUTO" for auto-discovery
 # COM_PORT = "/dev/ttyACM0"
-# COM_PORT = "COM5"
-COM_PORT = "AUTO"
+COM_PORT = "COM5"
+#COM_PORT = "AUTO"
 
 # Display revision: A or B (for "flagship" version, use B) or SIMU for simulated LCD (image written in screencap.png)
 # To identify your revision: https://github.com/mathoudebine/turing-smart-screen-python/wiki/Hardware-revisions
-REVISION = "A"
+REVISION = "B"
 
 stop = False
 
@@ -85,7 +85,7 @@ if __name__ == "__main__":
     lcd_comm.InitializeComm()
 
     # Set brightness in % (warning: revision A display can get hot at high brightness!)
-    lcd_comm.SetBrightness(level=10)
+    lcd_comm.SetBrightness(level=100)
 
     # Set backplate RGB LED color (for supported HW only)
     lcd_comm.SetBackplateLedColor(led_color=(255, 255, 255))
@@ -104,22 +104,22 @@ if __name__ == "__main__":
     lcd_comm.DisplayBitmap(background)
 
     # Display sample text
-    lcd_comm.DisplayText("Basic text", 50, 100)
+   # lcd_comm.DisplayText("Basic text", 50, 100)
 
     # Display custom text with solid background
-    lcd_comm.DisplayText("Custom italic multiline text\nright-aligned", 5, 150,
-                         font="roboto/Roboto-Italic.ttf",
-                         font_size=20,
-                         font_color=(0, 0, 255),
-                         background_color=(255, 255, 0),
-                         align='right')
+    #lcd_comm.DisplayText("Custom italic multiline text\nright-aligned", 5, 150,
+     #                    font="roboto/Roboto-Italic.ttf",
+      #                   font_size=20,
+       #                  font_color=(0, 0, 255),
+        #                 background_color=(255, 255, 0),
+         #                align='right')
 
     # Display custom text with transparent background
-    lcd_comm.DisplayText("Transparent bold text", 5, 250,
-                         font="geforce/GeForce-Bold.ttf",
-                         font_size=30,
-                         font_color=(255, 255, 255),
-                         background_image=background)
+   # lcd_comm.DisplayText("Transparent bold text", 5, 250,
+    #                     font="geforce/GeForce-Bold.ttf",
+     #                    font_size=30,
+      #                   font_color=(255, 255, 255),
+       #                  background_image=background)
 
     # Display the current time and some progress bars as fast as possible
     bar_value = 0
