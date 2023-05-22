@@ -12,7 +12,7 @@ static_images:
     HEIGHT: 320
 static_text:
   CPU_MODEL:
-    TEXT: Ryzen 5700G
+    TEXT: RTX 4070ti
     X: 181
     Y: 12
     FONT: generale-mono/GeneraleMonoA.ttf

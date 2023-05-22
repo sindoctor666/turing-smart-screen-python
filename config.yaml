@@ -17,7 +17,7 @@ config:
   # - bash-dark-green
   # - bash-dark-green-gpu
   # - BigClock
-  THEME: Cyberpunk-net
+  THEME: Cyberdemon
 
   # Hardware sensors reading
   # Choose the appropriate method for reading your hardware sensors:
